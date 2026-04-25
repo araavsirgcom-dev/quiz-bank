@@ -1,26 +1,26 @@
 Question|Option A|Option B|Option C|Option D|Correct Index|Explanation
-Who led the 1857 Revolt against the British from Ara, Bihar? |Kunwar Singh|Amar Singh|Pir Ali|Hare Krishna Singh|0|80-year-old Veer Kunwar Singh of Jagdispur (Ara) led the revolt.
-The famous 'Aranya Devi Temple' is located in which district of Bihar?|Patna|Bhojpur (Ara)|Buxar|Rohtas|1|Aranya Devi is the presiding deity of Ara town in Bhojpur district.
-In which year was the 'Bhojpur' district officially created by carving it out of Shahabad?|1972|1991|1956|2000|0|Old Shahabad district was divided into Bhojpur and Rohtas in 1972.
-Which famous Jain temple, known for its ancient inscriptions, is located near Ara?|Masarh|Jalmandir|Pawapuri|Maner|0|Masarh near Ara has ancient Jain temples and is linked to Banasur.
-The 'Ara Canal', one of the oldest in Bihar, takes water from which river?|Ganga|Sone|Gandak|Kosi|1|The Sone Canal system, including the Ara canal, was developed by the British.
-Which among the following was the birthplace of Veer Kunwar Singh?|Arrah Town|Jagdispur|Behea|Piro|1|Kunwar Singh was born in the royal Ujjainiya Rajput family of Jagdispur.
-Consider: 1. Ara was part of the ancient Magadha Empire. 2. It was a strategic point during British rule. Which is correct?|1 only|2 only|Both 1 and 2|Neither 1 nor 2|2|Ara has been historically significant from Magadha times to the British era.
-The 'Little House' or 'Ara House', famous for the 1857 siege, is located in the premises of?|Maharaja College|Civil Court|Ramna Maidan|Railway Station|0|The historic 'Ara House' is located within the Maharaja College campus.
-Who was the younger brother of Veer Kunwar Singh who continued the struggle after him?|Amar Singh|Hare Krishna Singh|Nishant Singh|Gulab Singh|0|Amar Singh led the guerrilla warfare in the hills of Kaimur after Kunwar Singh.
-Ara is situated between which two major rivers?|Ganga and Gandak|Ganga and Sone|Sone and Punpun|Ganga and Karmanasa|1|Bhojpur (Ara) is bounded by the Ganga on the North and Sone on the East.
-Which famous mathematician, known for 'Vashishtha's Theorem', belonged to Bhojpur?|Vashishtha Narayan Singh|Aryabhatta|Brahmagupta|Anand Kumar|0|Dr. Vashishtha Narayan Singh was born in Basantpur village of Bhojpur.
-The 'Sone River Bridge' connecting Ara and Patna (at Koilwar) is named after?|Abdul Bari|Kunwar Singh|Rajendra Prasad|Jawaharlal Nehru|0|The historic Koilwar bridge is named after the freedom fighter Abdul Bari.
-Which language is predominantly spoken in the Ara-Bhojpur region?|Maithili|Magahi|Bhojpuri|Angika|2|Bhojpur is the heartland of the Bhojpuri language.
-Consider: 1. Ara witnessed a major communal riot in 1917. 2. It was a center of the Quit India Movement. Which is true?|1 only|2 only|Both 1 and 2|Neither 1 nor 2|2|Ara has a complex socio-political history involving both movements.
-The 'Maharaja College' in Ara was established by the ruler of?|Jagdispur|Dumraon|Hathwa|Bettiah|1|The Maharaja of Dumraon established this premier institution in 1954.
-In terms of agriculture, Ara (Bhojpur) is majorly known for the production of?|Litchi|Rice (Sona Masuri)|Tobacco|Makhana|1|Bhojpur is part of the 'Rice Bowl' of Bihar due to Sone canal irrigation.
-Which ancient site near Ara is associated with the 'Ujjainiya' Rajputs?|Jagdispur Fort|Bihiya|Udwantnagar|Shahpur|0|Jagdispur was the stronghold of the Ujjainiya clan in Bihar.
-The 'Battle of Buxar' (1764) had deep impacts on the neighboring region of?|Ara|Purnia|Katihar|Supaul|0|Buxar and Ara (Shahabad region) were strategically linked during British expansion.
-Which rail-road bridge connects Ara to Saran (Chhapra)?|Digha Bridge|Veer Kunwar Singh Setu|Rajendra Setu|Mahatma Gandhi Setu|1|The Veer Kunwar Singh Setu (Arrah-Chhapra Bridge) connects these two districts.
-Who among the following from Ara served as the Speaker of Lok Sabha?|Bali Ram Bhagat|Meira Kumar|Jagjivan Ram|Rabi Ray|0|Bali Ram Bhagat, born in the region, served as the Speaker of Lok Sabha.
-The headquarters of the Bhojpur district is?|Behea|Jagdispur|Ara|Piro|2|Ara is the administrative headquarters of Bhojpur district.
-What is the historical name of the region comprising Ara and Buxar?|Mithila|Shahabad|Anga|Magadha|1|Until 1972, Ara was part of the larger Shahabad district.
-Which festival is celebrated with greatest fervor in Ara, similar to the rest of Bihar?|Durga Puja|Chhath Puja|Holi|Diwali|1|Chhath Puja is the most significant cultural festival in the region.
-The 'Koilwar Bridge' over Sone river was inaugurated in which year during British rule?|1862|1905|1947|1920|0|One of the oldest steel bridges in India, it was opened in 1862.
-Consider: 1. Ara is a major junction on the East Central Railway. 2. It connects Patna to Varanasi. Which is true?|1 only|2 only|Both 1 and 2|Neither 1 nor 2|2|Ara Junction is a key station on the Delhi-Howrah main line via Patna.
+Who led the 1857 Revolt from Jagdispur (Ara) in Bihar?|Kunwar Singh|Amar Singh|Pir Ali|Hare Krishna Singh|0|80-year-old Veer Kunwar Singh led the rebellion and defeated British forces multiple times.
+The 'Aranya Devi Temple', the presiding deity of Ara, is located in which district?|Buxar|Bhojpur|Patna|Rohtas|1|Aranya Devi temple is a historic temple located in the heart of Ara town, Bhojpur.
+In which year was the 'Bhojpur' district created by carving it out of Shahabad?|1956|1972|1991|2000|1|The old Shahabad district was divided into Bhojpur and Rohtas in 1972.
+Which famous mathematician, known as 'Vashishtha's Theorem', was born in Bhojpur?|Aryabhatta|Vashishtha Narayan Singh|Brahmagupta|Anand Kumar|1|Dr. Vashishtha Narayan Singh was a legendary mathematician born in Basantpur, Bhojpur.
+The 'Koilwar Bridge' over Sone river in Ara is named after which leader?|Rajendra Prasad|Abdul Bari|Kunwar Singh|Jayaprakash Narayan|1|It is named Abdul Bari Bridge, after the famous social reformer and freedom fighter.
+Which ancient site near Ara is associated with the 'Ujjainiya' Rajputs?|Jagdispur|Masarh|Bihiya|Udwantnagar|1|Masarh is an ancient village near Ara known for its Jain temples and Ujjainiya history.
+The 'Ara House', famous for the 1857 siege, is located in the premises of?|Civil Court|Maharaja College|Ramna Maidan|Railway Station|1|The historic 'Ara House' is located within the campus of Maharaja College, Ara.
+Who was the younger brother of Veer Kunwar Singh who continued the struggle after him?|Amar Singh|Nishant Singh|Gulab Singh|Hare Krishna Singh|0|Amar Singh led the guerrilla warfare in the Kaimur hills after Kunwar Singh's death.
+Ara is situated between which two major rivers?|Ganga and Gandak|Ganga and Sone|Sone and Punpun|Ganga and Karmanasa|1|Bhojpur (Ara) is bounded by the Ganga on the North and the Sone on the East.
+Which language is the primary mother tongue of the people of Bhojpur?|Maithili|Magahi|Bhojpuri|Angika|2|Bhojpur is the heartland and namesake of the Bhojpuri language.
+The 'Battle of Buxar' (1764) had a significant impact on which neighbouring region?|Purnia|Shahabad (Ara)|Mithila|Magadh|1|The Shahabad region (including Ara) was strategically crucial during and after the battle.
+'Veer Kunwar Singh University' (VKSU) was established in Ara in which year?|1954|1992|1972|2005|1|VKSU was established in 1992 in Ara to cater to the higher education needs of the region.
+Who was the ruler of Jagdispur during the 1857 movement?|Kunwar Singh|Fateh Bahadur Sahi|Raja Shah Mal|Zalim Singh|0|Kunwar Singh was the Zamindar of Jagdispur and a key leader of the 1857 revolt.
+The 'Sone Canal' system, which irrigates Ara, was developed during?|Mughal era|British era|Mauryan era|Post-independence|1|The Sone Canal system is one of the oldest in India, commissioned by the British in 1874.
+Which famous Jain temple known for its 2000-year-old inscriptions is near Ara?|Masarh Jain Temple|Jalmandir|Pawapuri|Maner Sharif|0|The Masarh temple is highly significant for its ancient artifacts and Jain heritage.
+Which rail-road bridge connects Ara to Saran (Chhapra)?|Digha Bridge|Veer Kunwar Singh Setu|Rajendra Setu|Mahatma Gandhi Setu|1|The Arrah-Chhapra Bridge is officially named Veer Kunwar Singh Setu.
+What was the old name of the district headquarters of Bhojpur?|Shahabad|Ara|Jagdispur|Behea|1|Ara has been the administrative headquarters of the region since British times.
+In terms of agriculture, Bhojpur is part of which region of Bihar?|Makhana Belt|Rice Bowl|Tobacco Belt|Litchi Belt|1|Bhojpur and Rohtas are known as the 'Rice Bowl' of Bihar due to excellent irrigation.
+Which freedom fighter from Ara served as the Speaker of the Lok Sabha?|Bali Ram Bhagat|Meira Kumar|Jagjivan Ram|Rabi Ray|0|Bali Ram Bhagat was born in Ara and served as the 5th Speaker of the Lok Sabha.
+The 'Ara-Patna' road link is connected by which historic bridge over Sone?|Digha|Koilwar|Mokama|Mahatma Gandhi|1|The Koilwar Bridge (Abdul Bari Bridge) is the oldest link between Ara and Patna.
+Which prominent social reformer and leader was born in Chandwa, near Ara?|Jagjivan Ram|Kunwar Singh|Amar Singh|Jayaprakash Narayan|0|Former Deputy PM Babu Jagjivan Ram was born in Chandwa village, Bhojpur.
+The 'Ramna Maidan' is a famous landmark located in which city of Bihar?|Patna|Gaya|Ara|Muzaffarpur|2|Ramna Maidan is the largest and most historic open ground in Ara town.
+Which dynasty's ruins are said to be found in the Masarh village of Ara?|Gupta|Mauryan|Ujjainiya|Pala|2|Masarh is historically linked to the Ujjainiya Rajput clan that ruled the region.
+The 'Little House at Arrah' is related to which historical event?|Civil Disobedience|1857 Siege of Ara|Quit India Movement|Champaran Satyagraha|1|A small British party defended themselves in this house against Kunwar Singh's forces.
+Bhojpur district shares its boundary with which Indian state?|Jharkhand|West Bengal|Uttar Pradesh|Nepal|2|Bhojpur (Ara) shares its western boundary with the state of Uttar Pradesh.
