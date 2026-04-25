@@ -1,4 +1,3 @@
-Question|Option A|Option B|Option C|Option D|Correct Index|Explanation
 With reference to the Preamble: 1. It is non-justiciable. 2. It can be amended. 3. It is part of the Constitution.|1 and 2 only|2 and 3 only|1 and 3 only|1, 2 and 3|3|The SC in Kesavananda Bharati case ruled that Preamble is a part of the Constitution.
 Regarding Fundamental Rights: 1. They are protected by Article 32. 2. Some are available only to citizens. 3. They can be suspended during Emergency.|1 and 2 only|2 and 3 only|1 and 3 only|1, 2 and 3|3|Art 20 and 21 cannot be suspended, but others can be under specific circumstances.
 Consider Directive Principles (DPSP): 1. Borrowed from Ireland. 2. Legally enforceable by courts. 3. Aim to establish a Welfare State.|1 and 2 only|2 and 3 only|1 and 3 only|1, 2 and 3|2|DPSPs are non-justiciable, meaning you cannot go to court to enforce them.
