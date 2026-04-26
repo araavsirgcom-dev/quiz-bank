@@ -1,11 +1,1 @@
-# ══════════════════════════════════════
-# QUIZ MENU — Yahan control karo quiz
-# ══════════════════════════════════════
-# Format: subject_name kitne_questions
-# 0 = saare questions lo
-# ══════════════════════════════════════
-
-history 10
-polity 5
-bihar 5
-current_affairs 5
+mppcs_2026_full 0
