@@ -23,3 +23,53 @@ The 'Ramna Maidan' is a famous landmark located in which city of Bihar?|Patna|Ga
 Which dynasty's ruins are said to be found in the Masarh village of Ara?|Gupta|Mauryan|Ujjainiya|Pala|2|Masarh is historically linked to the Ujjainiya Rajput clan that ruled the region.
 The 'Little House at Arrah' is related to which historical event?|Civil Disobedience|1857 Siege of Ara|Quit India Movement|Champaran Satyagraha|1|A small British party defended themselves in this house against Kunwar Singh's forces.
 Bhojpur district shares its boundary with which Indian state?|Jharkhand|West Bengal|Uttar Pradesh|Nepal|2|Bhojpur (Ara) shares its western boundary with the state of Uttar Pradesh.
+Which city is the capital of Bihar?|Gaya|Patna|Muzaffarpur|Bhagalpur|1|Patna, situated on the southern bank of the Ganga, was ancient Pataliputra.
+Bihar was bifurcated to form Jharkhand in which year?|1998|2000|2002|2004|1|Jharkhand was carved out of Bihar on 15 November 2000.
+Bodh Gaya, where Gautama Buddha attained enlightenment, is in which district?|Nalanda|Vaishali|Gaya|Patna|2|Bodh Gaya lies about 13 km from Gaya city in Gaya district.
+Which ancient university was located near Rajgir in Bihar?|Vikramashila|Nalanda|Taxila|Odantapuri|1|Nalanda was a world-renowned centre of learning in ancient India near Rajgir.
+The Mahabodhi Temple in Bodh Gaya became a UNESCO World Heritage Site in which year?|1985|2000|2002|2010|2|It was inscribed in 2002 for its outstanding universal value.
+Who was the first Chief Minister of Bihar after independence?|Jagannath Mishra|Sri Krishna Sinha|Karpoori Thakur|Bhola Paswan Shastri|1|Sri Krishna Sinha served as CM of Bihar from 1946 to 1961.
+The Rajgir hills are associated with which ancient king of Magadha?|Ashoka|Bimbisara|Chandragupta|Harsha|1|Bimbisara of the Haryanka dynasty made Rajgir his capital.
+Sonepur Cattle Fair (Harihar Kshetra Mela) is held at the confluence of which two rivers?|Ganga and Gandak|Ganga and Sone|Kosi and Mahananda|Burhi Gandak and Ganga|0|It is the world's largest cattle fair held on Kartik Poornima at Sonepur.
+Which district of Bihar is considered the birthplace of Lord Mahavira?|Gaya|Nalanda|Vaishali|East Champaran|2|Vaishali is the birthplace of Lord Mahavira and a key Buddhist and Jain site.
+The ruins of Vikramshila University are located in which district?|Bhagalpur|Nalanda|Banka|Munger|0|The ruins are near Antichak village in Bhagalpur district.
+The Champaran Satyagraha of 1917 was primarily against which practice?|Salt tax|Indigo cultivation|Land revenue|Cattle seizure|1|British planters forced peasants to cultivate indigo under the tinkathia system.
+Mithila Painting (Madhubani art) originates from which region of Bihar?|Bhojpur|Tirhut/Mithila|Magadh|Anga|1|Madhubani town in Darbhanga district is the heartland of this folk art.
+The Kosi River is often called the 'Sorrow of Bihar' due to?|Drought|Frequent floods and course changes|Water scarcity|Saline soil|1|The Kosi frequently changes course causing devastating floods in north Bihar.
+Jayaprakash Narayan was born in which district of Bihar?|Siwan|Saran|Bhojpur|Champaran|1|He was born in Sitabdiara village, Saran district, in 1902.
+The Patna Sahib Gurudwara is associated with which Sikh Guru?|Guru Nanak|Guru Tegh Bahadur|Guru Gobind Singh|Guru Har Rai|2|Guru Gobind Singh, the tenth Sikh Guru, was born in Patna in 1666.
+Bihar's Panchayati Raj system reserves what percentage of seats for women?|33%|40%|50%|25%|2|Bihar was among the first states to implement 50% reservation for women in Panchayats.
+The Son River originates from which state?|Madhya Pradesh|Chhattisgarh|Jharkhand|Uttar Pradesh|0|The Son rises near Amarkantak in Madhya Pradesh and flows northeast into Bihar.
+The Jal Mandir at Pawapuri is significant because Lord Mahavira?|Was born here|Delivered first sermon here|Attained nirvana here|Spent monsoon here|2|Pawapuri is the place where Mahavira attained nirvana; Jal Mandir is built over the lotus pond.
+The Mahajanapada of Magadha had its core territory in modern-day?|North Bihar|South Bihar|East Bihar|West Bihar|1|Magadha covered the Patna–Gaya–Nalanda belt in south Bihar.
+Which Bihar district has the highest literacy rate as per Census 2011?|Patna|Rohtas|Nalanda|Munger|1|Rohtas had the highest literacy rate (approx. 73%) in Bihar in 2011.
+India's first President Dr. Rajendra Prasad was born in which district of Bihar?|Muzaffarpur|Siwan|Saran|Champaran|1|Dr. Rajendra Prasad was born in Zeradei village, Siwan district.
+Which festival is unique to Bihar and considered its most important folk festival?|Diwali|Chhath Puja|Holi|Navratri|1|Chhath Puja is dedicated to the Sun God and is Bihar's most distinctive festival.
+The Bihar Museum in Patna was inaugurated in which year?|2010|2013|2015|2018|2|The modern Bihar Museum was inaugurated in 2015 and designed by Maki and Associates.
+Veer Kunwar Singh died in which year after the 1857 revolt?|1857|1858|1859|1860|1|He died on 26 April 1858, just two days after his final victory at Jagdispur.
+The Patna High Court was established in which year?|1916|1922|1935|1947|0|The Patna High Court was established on 2 September 1916 under the Government of India Act 1915.
+The first recipient of the Bharat Ratna from Bihar was?|Rajendra Prasad|Jagjivan Ram|Jayaprakash Narayan|Ustad Bismillah Khan|0|Dr. Rajendra Prasad received the Bharat Ratna in 1962.
+Which language was declared the second official language of Bihar in 1981?|Maithili|Urdu|Bhojpuri|Magahi|1|Urdu was given second official language status in Bihar in 1981.
+The Valmiki Tiger Reserve in Bihar is located in which district?|East Champaran|West Champaran|Sitamarhi|Gopalganj|1|Valmiki Tiger Reserve is Bihar's only tiger reserve in West Champaran near Nepal.
+The Litchi of which district of Bihar has received a GI tag?|Darbhanga|Muzaffarpur|Vaishali|Samastipur|1|Muzaffarpur's Shahi litchi received Geographical Indication (GI) tag recognition.
+Which river enters Bihar from Uttar Pradesh at Buxar?|Son|Ganga|Gandak|Karmanasa|1|The Ganga crosses into Bihar at Buxar after leaving Uttar Pradesh.
+Chandragupta Maurya established the Maurya Empire with capital at which city in Bihar?|Rajgir|Vaishali|Pataliputra (Patna)|Nalanda|2|Pataliputra (modern Patna) was the grand capital of the Maurya Empire from around 322 BCE.
+The Barabar Caves near Jehanabad are the oldest surviving examples of which type of architecture?|Jain cave temples|Buddhist cave shrines|Hindu cave temples|Ajivika rock-cut caves|3|Ashoka had the Barabar Caves cut for the Ajivika sect; they are India's oldest rock-cut caves.
+Nalanda International University was revived and began functioning in which year?|2006|2010|2014|2018|2|The modern Nalanda University was re-established and became functional in 2014.
+The Kesariya Stupa in East Champaran is considered the world's?|Largest Buddhist stupa|Oldest temple|Tallest Jain statue|Oldest inscription site|0|Kesariya Stupa (104 ft high) is claimed to be the world's largest Buddhist stupa.
+How many Indian states does Bihar share its border with?|2|3|4|5|1|Bihar shares borders with Uttar Pradesh, Jharkhand, and West Bengal (3 states) plus Nepal.
+The Maner Sharif dargah near Patna is dedicated to which Sufi saint?|Makhdoom Yahya Maneri|Malik Ibrahim Baya|Shah Daula|Firdausi|0|The dargah of Hazrat Makhdoom Yahya Maneri at Maner is a major pilgrimage site.
+Bihar's demand for Special Category Status is mainly to secure?|Religious autonomy|Higher central fund allocation ratio|Separate army unit|Tax exemptions like hill states|3|Bihar wants SCS for 90:10 centre-state funding ratio like northeastern states get.
+The Vaishali republic of the Lichchhavi clan is considered the world's first?|University|Republic/Democracy|Trading post|Library|1|Vaishali is recognised as one of the world's earliest republics around 6th century BCE.
+Which national highway connects Patna to Kolkata via the Grand Trunk Road?|NH-19|NH-28|NH-30|NH-31|0|NH-19 (formerly NH-2), the Grand Trunk Road, passes through Patna toward Kolkata.
+The Ganga Action Plan for cleaning the Ganga was launched in which decade?|1970s|1980s|1990s|2000s|1|GAP Phase I was launched in 1986 under Rajiv Gandhi's government.
+Which city is associated with the ancient mathematician Aryabhata?|Nalanda|Kusumapura (Patna)|Vaishali|Rajgir|1|Aryabhata lived in Kusumapura, identified with Patna, in the 5th century CE.
+The Sone Canal irrigation system in Bihar was commissioned by the British in which year?|1856|1874|1905|1920|1|The Sone Canal is one of India's oldest canal systems, commissioned in 1874 by the British.
+Which festival involves worship of the setting and rising sun on the banks of rivers in Bihar?|Makar Sankranti|Chhath Puja|Surya Shashti|Kartik Puja|1|Chhath Puja involves 36-hour fast and arghya to the setting and rising sun over two days.
+The Champaran district in Bihar is primarily associated with which crop agitation?|Cotton|Indigo|Opium|Jute|1|The Champaran Satyagraha of 1917 was against forced indigo cultivation under the tinkathia system.
+Which emperor's pillars and edicts are found at Lauriya Nandangarh in Bihar?|Chandragupta Maurya|Ashoka|Bindusara|Kanishka|1|Ashoka's pillars at Lauriya Nandangarh are among the best preserved Mauryan pillars in India.
+The 'Srikrishna Singh' who served as Bihar's first CM belonged to which party?|Indian National Congress|Socialist Party|Jana Sangh|Praja Socialist Party|0|Sri Krishna Sinha was a senior Congress leader who served as CM from 1946 to 1961.
+The Rajendra Setu bridge across the Ganga in Bihar is located near which town?|Patna|Mokama|Hajipur|Buxar|1|Rajendra Setu (rail-cum-road bridge) is located at Mokama and was completed in 1959.
+Bihar's 'Makhana' (fox nut) production is concentrated mainly in which district?|Darbhanga|Madhubani|Mithila/Darbhanga belt|Sitamarhi|2|The Mithila-Darbhanga belt is responsible for over 80% of India's total makhana production.
+Which ancient site in Bihar is associated with the last sermon of Lord Buddha?|Bodh Gaya|Vaishali|Sarnath|Kushinagar|1|Buddha delivered his last sermon and announced his impending death at Vaishali.
+The Bihar Legislative Assembly (Vidhan Sabha) has how many seats?|200|234|243|250|2|The Bihar Vidhan Sabha has 243 seats as per the delimitation in force.
