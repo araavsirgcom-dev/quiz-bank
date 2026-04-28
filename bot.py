@@ -5,6 +5,7 @@ import time
 import threading
 import random
 import re
+from datetime import datetime
 
 try:
     import requests
@@ -14,93 +15,161 @@ except ImportError:
     import requests
 
 # ══════════════════════════════════════
-#         SETTINGS - YAHAN BADLO
+#         SETTINGS
 # ══════════════════════════════════════
-TOKEN    = '8642537837:AAFdvNHqy9_E07ygKcCCjJNn7RVXWL3lNE8'
-CHAT_ID  = '-1003952438399'
-GITHUB   = 'araavsirgcom-dev'
-REPO     = 'quiz-bank'
-BRANCH   = 'main'
+TOKEN   = '8642537837:AAFdvNHqy9_E07ygKcCCjJNn7RVXWL3lNE8'
+CHAT_ID = '-1003952438399'
+GITHUB  = 'araavsirgcom-dev'
+REPO    = 'quiz-bank'
+BRANCH  = 'main'
 # ══════════════════════════════════════
 
 BASE_URL = f'https://raw.githubusercontent.com/{GITHUB}/{REPO}/{BRANCH}'
 
 bot = telebot.TeleBot(TOKEN)
 
-quiz_results        = {}
-is_quiz_on          = False
+quiz_results           = {}
+is_quiz_on             = False
 current_correct_answer = None
-quiz_lock           = threading.Lock()
+quiz_lock              = threading.Lock()
 
 
-# ──────────────────────────────────────
-# GitHub se file fetch karo
-# ──────────────────────────────────────
 def fetch_file(path):
     url = f'{BASE_URL}/{path}'
     try:
         r = requests.get(url, timeout=10)
         if r.status_code == 200:
             return r.text
-        else:
-            print(f'❌ Fetch failed: {url} → {r.status_code}')
-            return None
+        print(f'Fetch failed: {path} -> {r.status_code}')
+        return None
     except Exception as e:
-        print(f'❌ Network error: {e}')
+        print(f'Network error: {e}')
         return None
 
 
-# ──────────────────────────────────────
-# menu.txt padho
-# ──────────────────────────────────────
 def read_menu():
     content = fetch_file('menu.txt')
     if not content:
         return []
-    selections = []
+
+    today      = datetime.now().weekday()  # 5=Sat, 6=Sun
+    is_weekend = today in [5, 6]
+
+    selections   = []
+    weekend_mode = False
+
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith('#'):
             continue
-        parts = line.split()
-        if len(parts) == 2:
+
+        # WEEKEND keyword
+        if line.upper() == 'WEEKEND':
+            weekend_mode = True
+            continue
+
+        parts   = line.split()
+        subject = parts[0].lower()
+
+        if len(parts) == 1:
+            selections.append({'subject': subject, 'mode': 'all', 'start': 0, 'end': 0, 'count': 0})
+
+        elif len(parts) == 2:
+            param = parts[1]
+            if '-' in param:
+                try:
+                    s, e = param.split('-')
+                    selections.append({'subject': subject, 'mode': 'range',
+                                       'start': int(s), 'end': int(e), 'count': 0})
+                except:
+                    pass
+            else:
+                try:
+                    count = int(param)
+                    mode  = 'random' if count > 0 else 'all'
+                    selections.append({'subject': subject, 'mode': mode,
+                                       'start': 0, 'end': 0, 'count': count})
+                except:
+                    pass
+
+        elif len(parts) == 3 and parts[1].lower() == 'random':
             try:
-                selections.append((parts[0].lower(), int(parts[1])))
-            except ValueError:
+                count = int(parts[2])
+                selections.append({'subject': subject, 'mode': 'random',
+                                   'start': 0, 'end': 0, 'count': count})
+            except:
                 pass
-        elif len(parts) == 1:
-            selections.append((parts[0].lower(), 0))
+
+    # Weekend mode — sab random ho jaata hai
+    if weekend_mode and is_weekend:
+        for s in selections:
+            s['mode']  = 'random'
+            if s['count'] == 0:
+                s['count'] = 10
+
     return selections
 
 
-# ──────────────────────────────────────
-# Bank file se questions load karo
-# ──────────────────────────────────────
-def load_questions(subject, count):
+def load_questions(sel):
+    subject = sel['subject']
+    mode    = sel['mode']
+    start   = sel.get('start', 0)
+    end     = sel.get('end', 0)
+    count   = sel.get('count', 0)
+
     content = fetch_file(f'bank/{subject}.txt')
     if not content:
         return []
-    questions = []
-    for line in content.splitlines():
+
+    all_q   = []
+    skipped = 0
+
+    for line_num, line in enumerate(content.splitlines(), 1):
         line = line.strip()
-        if not line or '|' not in line:
+        if not line or line.startswith('#'):
             continue
         parts = line.split('|')
-        if len(parts) >= 6:
-            questions.append({
-                'question':    parts[0],
-                'options':     [parts[1], parts[2], parts[3], parts[4]],
-                'correct':     int(parts[5]),
-                'explanation': parts[6] if len(parts) >= 7 else 'Sahi jawab!'
-            })
-    if count == 0 or count >= len(questions):
-        return questions
-    return random.sample(questions, count)
+        if len(parts) < 6:
+            skipped += 1
+            continue
+        try:
+            correct_idx = int(parts[5].strip())
+        except ValueError:
+            skipped += 1
+            continue
+        if correct_idx not in [0, 1, 2, 3]:
+            skipped += 1
+            continue
+
+        all_q.append({
+            'question':    parts[0].strip(),
+            'options':     [parts[1].strip(), parts[2].strip(),
+                            parts[3].strip(), parts[4].strip()],
+            'correct':     correct_idx,
+            'explanation': parts[6].strip() if len(parts) >= 7 else 'Sahi jawab!'
+        })
+
+    if not all_q:
+        return []
+
+    if mode == 'range':
+        s        = max(0, start - 1)
+        e        = min(len(all_q), end)
+        selected = all_q[s:e]
+        print(f'{subject}.txt -> Range Q{start}-Q{end} -> {len(selected)} questions')
+
+    elif mode == 'random':
+        n        = min(count, len(all_q)) if count > 0 else len(all_q)
+        selected = random.sample(all_q, n)
+        print(f'{subject}.txt -> Random {n} questions')
+
+    else:
+        selected = all_q
+        print(f'{subject}.txt -> All {len(selected)} questions')
+
+    return selected
 
 
-# ──────────────────────────────────────
-# Hindi/English mix → vertical format
-# ──────────────────────────────────────
 def fmt(text):
     hindi = re.compile(r'[\u0900-\u097F]+')
     words = text.split()
@@ -118,9 +187,6 @@ def fmt(text):
     return '\n'.join(lines)
 
 
-# ──────────────────────────────────────
-# Poll answer handler
-# ──────────────────────────────────────
 @bot.poll_answer_handler()
 def handle_poll_answer(poll_answer):
     global quiz_results, current_correct_answer
@@ -136,39 +202,41 @@ def handle_poll_answer(poll_answer):
         quiz_results[uid]['incorrect'] += 1
 
 
-# ──────────────────────────────────────
-# Quiz runner (thread mein chalta hai)
-# ──────────────────────────────────────
 def run_quiz():
     global is_quiz_on, quiz_results, current_correct_answer
 
     try:
-        # Step 1 — GitHub se menu padho
-        bot.send_message(CHAT_ID, '⏳ <b>GitHub se questions fetch ho rahe hain...</b>', parse_mode='HTML')
-        selections = read_menu()
+        bot.send_message(CHAT_ID,
+            '⏳ <b>GitHub se questions fetch ho rahe hain...</b>',
+            parse_mode='HTML')
 
+        selections = read_menu()
         if not selections:
-            bot.send_message(CHAT_ID, '❌ <b>menu.txt khaali hai ya GitHub se connect nahi hua!</b>', parse_mode='HTML')
+            bot.send_message(CHAT_ID,
+                '❌ <b>menu.txt khaali hai ya GitHub connect nahi hua!</b>',
+                parse_mode='HTML')
             return
 
-        # Step 2 — Questions load karo
         all_q = []
-        for subject, count in selections:
-            qs = load_questions(subject, count)
+        for sel in selections:
+            qs = load_questions(sel)
             all_q.extend(qs)
-            c = 'saare' if count == 0 else str(count)
-            print(f'✅ {subject}.txt → {len(qs)} questions')
 
         if not all_q:
-            bot.send_message(CHAT_ID, '❌ <b>Koi questions nahi mila! Bank files check karo.</b>', parse_mode='HTML')
+            bot.send_message(CHAT_ID,
+                '❌ <b>Koi valid question nahi mila!</b>',
+                parse_mode='HTML')
             return
 
-        total_q = len(all_q)
+        total_q    = len(all_q)
+        today      = datetime.now().weekday()
+        is_weekend = today in [5, 6]
+        day_tag    = '🎲 <b>WEEKEND RANDOM MIX!</b>' if is_weekend else '📅 <b>DAILY QUIZ</b>'
 
-        # Step 3 — Intro message
         intro = (
-            '📖 <b>UPSC/BPSC QUIZ SHURU HO RAHA HAI!</b>\n\n'
-            '📍 <b>Total Questions:</b> ' + str(total_q) + '\n'
+            f'📖 {day_tag}\n\n'
+            '<b>UPSC / BPSC / MPPCS QUIZ</b>\n\n'
+            f'📍 <b>Total Questions:</b> {total_q}\n'
             '⏱️ <b>Har Question Ka Time:</b> 15 Seconds\n'
             '🏆 <b>Points:</b> Sirf Sahi Jawab Pe!\n\n'
             '👉 <i>Quiz 5 second mein shuru hoga...</i>'
@@ -176,27 +244,25 @@ def run_quiz():
         bot.send_message(CHAT_ID, intro, parse_mode='HTML')
         time.sleep(5)
 
-        # Step 4 — Questions bhejo
         for i, q in enumerate(all_q):
-            current_correct_answer = int(q['correct'])
+            current_correct_answer = q['correct']
             question_text = fmt(q['question'])
             options       = [fmt(o)[:100] for o in q['options']]
             poll_q        = f'❓ Q{i+1}/{total_q}:\n\n{question_text}'[:300]
             footer        = '\n\n━━━━━━━━━━━━━━━\n© @dkstudio'
 
             bot.send_poll(
-                chat_id             = CHAT_ID,
-                question            = poll_q,
-                options             = options,
-                type                = 'quiz',
-                correct_option_id   = current_correct_answer,
-                explanation         = q.get('explanation', 'Sahi jawab chuniye!') + footer,
-                is_anonymous        = False,
-                open_period         = 15
+                chat_id           = CHAT_ID,
+                question          = poll_q,
+                options           = options,
+                type              = 'quiz',
+                correct_option_id = current_correct_answer,
+                explanation       = q.get('explanation', 'Sahi jawab!') + footer,
+                is_anonymous      = False,
+                open_period       = 15
             )
             time.sleep(17)
 
-        # Step 5 — Result card
         is_quiz_on             = False
         current_correct_answer = None
 
@@ -205,13 +271,17 @@ def run_quiz():
         if not quiz_results:
             result += '😴 Kisi ne koi jawab nahi diya!'
         else:
-            sorted_res = sorted(quiz_results.items(), key=lambda x: x[1]['score'], reverse=True)
+            sorted_res = sorted(
+                quiz_results.items(),
+                key=lambda x: x[1]['score'],
+                reverse=True
+            )
             medals = ['🥇', '🥈', '🥉']
             ranks  = ['1st Place', '2nd Place', '3rd Place']
 
             for i, (uid, data) in enumerate(sorted_res):
-                medal = medals[i] if i < 3 else '👤'
-                rank  = ranks[i]  if i < 3 else f'{i+1}th Place'
+                medal     = medals[i] if i < 3 else '👤'
+                rank      = ranks[i]  if i < 3 else f'{i+1}th Place'
                 correct   = data['score']
                 incorrect = data['incorrect']
                 attempted = correct + incorrect
@@ -228,7 +298,9 @@ def run_quiz():
 
     except Exception as e:
         is_quiz_on = False
-        bot.send_message(CHAT_ID, f'❌ Error aaya:\n<code>{e}</code>', parse_mode='HTML')
+        bot.send_message(CHAT_ID,
+            f'❌ Error aaya:\n<code>{e}</code>',
+            parse_mode='HTML')
 
     finally:
         try:
@@ -237,19 +309,14 @@ def run_quiz():
             pass
 
 
-# ──────────────────────────────────────
-# Commands
-# ──────────────────────────────────────
 @bot.message_handler(commands=['startquiz'])
 def start_quiz(message):
     global is_quiz_on, quiz_results, current_correct_answer
 
     if not quiz_lock.acquire(blocking=False):
-        bot.send_message(
-            CHAT_ID,
-            '⚠️ <b>Quiz pehle se chal rahi hai!</b>\n\nKhatam hone do, phir /startquiz dabao. 🙏',
-            parse_mode='HTML'
-        )
+        bot.send_message(CHAT_ID,
+            '⚠️ <b>Quiz pehle se chal rahi hai!</b>\n\nKhatam hone do phir /startquiz dabao.',
+            parse_mode='HTML')
         return
 
     quiz_results           = {}
@@ -273,9 +340,39 @@ def stop_quiz(message):
 
 @bot.message_handler(commands=['status'])
 def status(message):
-    state = '🟢 Chal rahi hai' if is_quiz_on else '🔴 Nahi chal rahi'
-    bot.send_message(CHAT_ID, f'<b>Quiz Status:</b> {state}', parse_mode='HTML')
+    state      = '🟢 Chal rahi hai' if is_quiz_on else '🔴 Nahi chal rahi'
+    today      = datetime.now().weekday()
+    day        = '🎲 Weekend' if today in [5, 6] else '📅 Weekday'
+    bot.send_message(CHAT_ID,
+        f'<b>Quiz Status:</b> {state}\n<b>Aaj:</b> {day}',
+        parse_mode='HTML')
 
 
-print('✅ Bot chal raha hai...')
+@bot.message_handler(commands=['help'])
+def help_cmd(message):
+    help_text = (
+        '<b>📚 QUIZ BOT — HELP</b>\n\n'
+        '<b>Commands:</b>\n'
+        '/startquiz — Quiz shuru karo\n'
+        '/stopquiz  — Quiz band karo\n'
+        '/status    — Bot status\n'
+        '/help      — Yeh message\n\n'
+        '<b>menu.txt ke formats:</b>\n\n'
+        '<code>history 10</code>\n'
+        '→ history se 10 random questions\n\n'
+        '<code>history 0</code>\n'
+        '→ history ke saare questions\n\n'
+        '<code>history 25-50</code>\n'
+        '→ history ke Q25 se Q50 tak\n\n'
+        '<code>WEEKEND</code>\n'
+        '→ Saturday/Sunday ko auto random mix\n\n'
+        '<b>Available subjects:</b>\n'
+        'history, polity, geography\n'
+        'bihar, economy, science\n'
+        'current_affairs, mppcs_2026'
+    )
+    bot.send_message(CHAT_ID, help_text, parse_mode='HTML')
+
+
+print('Bot chal raha hai...')
 bot.polling(none_stop=True)
